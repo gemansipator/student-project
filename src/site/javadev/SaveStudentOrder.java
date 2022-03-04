@@ -7,7 +7,9 @@ public class SaveStudentOrder {
     }
 
     static void saveStudentOrder(){
-        System.out.println("saveStudentOrder");
+        System.out.println("saveStudentOrder 1");
+        System.out.println("saveStudentOrder 2");
+        System.out.println("saveStudentOrder 3");
 
     }
 }
