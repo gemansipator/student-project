@@ -3,14 +3,22 @@ package site.javadev;
 public class SaveStudentOrder {
 
     public static void main(String[] args) {
-        long ans = saveStudentOrder();
+        StudentOrder so;
+        so = new StudentOrder();
+        so.hFirstName = "Алексей";
+        so.hLastName = "Петров";
+        so.wFirstName = "Галина";
+        so.wLastName = "Петрова";
+
+        long ans = saveStudentOrder(so);
         System.out.println(ans);
 
     }
 
-    static long saveStudentOrder(){
+    static long saveStudentOrder(StudentOrder studentOrder){
         long ansfer = 199;
-        return ansfer;
 
+        System.out.println("saveStudentOrder: " + studentOrder.hFirstName);
+        return ansfer;
     }
 }
