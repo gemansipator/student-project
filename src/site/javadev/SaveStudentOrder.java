@@ -3,14 +3,14 @@ package site.javadev;
 public class SaveStudentOrder {
 
     public static void main(String[] args) {
-        saveStudentOrder();
-        saveStudentOrder();
+        long ans = saveStudentOrder();
+        System.out.println(ans);
 
     }
 
-    static void saveStudentOrder(){
-        System.out.println("saveStudentOrder 1");
-
+    static long saveStudentOrder(){
+        long ansfer = 199;
+        return ansfer;
 
     }
 }
