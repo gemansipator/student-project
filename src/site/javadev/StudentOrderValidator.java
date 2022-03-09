@@ -6,12 +6,14 @@ public class StudentOrderValidator {
     }
     static void chekAll(){
         StudentOrder so = readStudentOrder();
+
         AnswerCityRegister cityAnswer = chekCityRegister(so);
         AnswerWedding wedAnswer = chekWedding(so);
-        chekCildren(so);
-        chekStudent(so);
+        AnswerChildren childAnswer =  chekCildren(so);
+        AnswerStudent studentAnswer =  chekStudent(so);
         sendMail(so);
     }
+
     static StudentOrder readStudentOrder(){
         StudentOrder so = new StudentOrder();
         return so;
@@ -26,11 +28,13 @@ public class StudentOrderValidator {
         System.out.println("Wedding запущен");
         return new AnswerWedding();
     }
-    static void chekCildren(StudentOrder so){
+    static AnswerChildren chekCildren(StudentOrder so){
         System.out.println("Children Chek is running");
+        return new AnswerChildren();
     }
-    static void chekStudent(StudentOrder so){
+    static AnswerStudent chekStudent(StudentOrder so){
         System.out.println();
+        return new AnswerStudent();
     }
 
     static void sendMail(StudentOrder so){
