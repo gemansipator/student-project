@@ -28,7 +28,7 @@ public class StudentOrderValidator {
 
     static StudentOrder readStudentOrder(){
         StudentOrder so = new StudentOrder();
-        return so;
+        return null;
 
     }
     static AnswerCityRegister chekCityRegister(StudentOrder so){
