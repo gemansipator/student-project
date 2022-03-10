@@ -10,10 +10,14 @@ public class StudentOrderValidator {
             StudentOrder so = readStudentOrder();
             System.out.println("Start");
             if(so == null){
-                break;
+                break; //выйти из цикла совсем
             }
             System.out.println("Finish");
+
             AnswerCityRegister cityAnswer = chekCityRegister(so);
+            if (!cityAnswer.succes){
+                continue; //вернуться в начало цикла
+            }
             AnswerWedding wedAnswer = chekWedding(so);
             AnswerChildren childAnswer = chekCildren(so);
             AnswerStudent studentAnswer = chekStudent(so);
@@ -24,12 +28,13 @@ public class StudentOrderValidator {
 
     static StudentOrder readStudentOrder(){
         StudentOrder so = new StudentOrder();
-        return null;
+        return so;
 
     }
     static AnswerCityRegister chekCityRegister(StudentOrder so){
         System.out.println("CityRegister is running");
         AnswerCityRegister ans = new AnswerCityRegister();
+        ans.succes = false;
         return ans;
     }
     static AnswerWedding chekWedding(StudentOrder so){
@@ -46,7 +51,7 @@ public class StudentOrderValidator {
     }
 
     static void sendMail(StudentOrder so){
-
+        System.out.println("Почта отправлена");
     }
 
 }
