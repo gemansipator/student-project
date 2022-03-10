@@ -16,6 +16,7 @@ public class StudentOrderValidator {
 
             AnswerCityRegister cityAnswer = chekCityRegister(so);
             if (!cityAnswer.succes){
+                //
                 continue; //вернуться в начало цикла
             }
             AnswerWedding wedAnswer = chekWedding(so);
