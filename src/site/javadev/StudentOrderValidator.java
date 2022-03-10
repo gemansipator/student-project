@@ -5,13 +5,19 @@ public class StudentOrderValidator {
         chekAll();
     }
     static void chekAll(){
-        StudentOrder so = readStudentOrder();
 
-        AnswerCityRegister cityAnswer = chekCityRegister(so);
-        AnswerWedding wedAnswer = chekWedding(so);
-        AnswerChildren childAnswer =  chekCildren(so);
-        AnswerStudent studentAnswer =  chekStudent(so);
-        sendMail(so);
+        while (true){StudentOrder so = readStudentOrder();
+            if(so == null){
+                 return;
+            }else {
+
+                AnswerCityRegister cityAnswer = chekCityRegister(so);
+                AnswerWedding wedAnswer = chekWedding(so);
+                AnswerChildren childAnswer = chekCildren(so);
+                AnswerStudent studentAnswer = chekStudent(so);
+                sendMail(so);
+            }
+        }
     }
 
     static StudentOrder readStudentOrder(){
