@@ -8,20 +8,23 @@ public class StudentOrderValidator {
 
         while (true){
             StudentOrder so = readStudentOrder();
+            System.out.println("Start");
             if(so == null){
                 break;
             }
+            System.out.println("Finish");
             AnswerCityRegister cityAnswer = chekCityRegister(so);
             AnswerWedding wedAnswer = chekWedding(so);
             AnswerChildren childAnswer = chekCildren(so);
             AnswerStudent studentAnswer = chekStudent(so);
             sendMail(so);
         }
+        System.out.println("Finish 2 СРАБОТАЛ break");
     }
 
     static StudentOrder readStudentOrder(){
         StudentOrder so = new StudentOrder();
-        return so;
+        return null;
 
     }
     static AnswerCityRegister chekCityRegister(StudentOrder so){
