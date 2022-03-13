@@ -20,7 +20,7 @@ public class StudentOrderValidator {
                 continue; //вернуться в начало цикла
             }
             AnswerWedding wedAnswer = chekWedding(so);
-            AnswerChildren childAnswer = chekCildren(so);
+            AnswerChildren childAnswer = chekChildren(so);
             AnswerStudent studentAnswer = chekStudent(so);
             sendMail(so);
         }
@@ -33,22 +33,16 @@ public class StudentOrderValidator {
 
     }
     static AnswerCityRegister chekCityRegister(StudentOrder so){
-        System.out.println("CityRegister is running");
-        AnswerCityRegister ans = new AnswerCityRegister();
-        ans.succes = false;
-        return ans;
+        return CityRegisterValidator.chekCityRegister(so);
     }
     static AnswerWedding chekWedding(StudentOrder so){
-        System.out.println("Wedding запущен");
-        return new AnswerWedding();
+        return WeddingValidator.chekWedding(so);
     }
-    static AnswerChildren chekCildren(StudentOrder so){
-        System.out.println("Children Chek is running");
-        return new AnswerChildren();
+    static AnswerChildren chekChildren(StudentOrder so){
+        return ChildrenValidator.chekChildren(so);
     }
     static AnswerStudent chekStudent(StudentOrder so){
-        System.out.println();
-        return new AnswerStudent();
+        return StudentValidator.chekStudent(so);
     }
 
     static void sendMail(StudentOrder so){
