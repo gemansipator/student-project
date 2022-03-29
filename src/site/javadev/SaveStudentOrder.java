@@ -1,10 +1,9 @@
 package site.javadev;
 
-public class SaveStudentOrder {
+public class SaveStudentOrder {  //сохранить заявление ученика (основной класс)
 
     public static void main(String[] args) {
-        StudentOrder so;
-        so = new StudentOrder();
+        StudentOrder so = new StudentOrder();
         so.hFirstName = "Алексей";
         so.hLastName = "Петров";
         so.wFirstName = "Галина";

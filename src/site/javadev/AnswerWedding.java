@@ -1,4 +1,4 @@
 package site.javadev;
 
-public class AnswerWedding {
+public class AnswerWedding {    //ответ брак
 }

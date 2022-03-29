@@ -1,4 +1,4 @@
 package site.javadev;
 
-public class AnswerStudent {
+public class AnswerStudent {   //ответ студент
 }

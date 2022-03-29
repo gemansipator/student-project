@@ -1,6 +1,6 @@
 package site.javadev;
 
-public class StudentOrder {
+public class StudentOrder { //собственная переменная типа StudentOrder
     String hFirstName;
     String hLastName;
     String wFirstName;

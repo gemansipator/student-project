@@ -1,4 +1,4 @@
 package site.javadev;
 
-public class AnswerChildren {
+public class AnswerChildren {  //ответ по детям по запросу заявки
 }
