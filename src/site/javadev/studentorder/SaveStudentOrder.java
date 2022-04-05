@@ -1,4 +1,6 @@
-package site.javadev;
+package site.javadev.studentorder;
+
+import site.javadev.studentorder.domain.StudentOrder;
 
 public class SaveStudentOrder {  //сохранить заявление ученика (основной класс)
 
