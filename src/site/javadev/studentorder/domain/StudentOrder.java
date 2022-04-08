@@ -1,5 +1,7 @@
 package site.javadev.studentorder.domain;
 
+import site.javadev.studentorder.domain.other.Adult;
+
 public class StudentOrder { //собственная переменная типа StudentOrder
 
     private long studentOrderId;

@@ -1,8 +1,10 @@
-package site.javadev.studentorder.domain;
+package site.javadev.studentorder.domain.other;
+
+import site.javadev.studentorder.domain.Person;
 
 import java.time.LocalDate;
 
-public class Adult extends Person{   //Взрослый
+public class Adult extends Person {   //Взрослый
 
     private String passportSeria;
     private String passportNumber;
@@ -10,6 +12,10 @@ public class Adult extends Person{   //Взрослый
     private String issueDepartment; // Департамент выдачи
     private String university;
     private String studentId;
+
+    public String getAdultString(){
+        return surName + " " + givenName + " " + passportSeria;
+    }
 
 
 

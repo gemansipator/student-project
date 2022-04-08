@@ -3,8 +3,8 @@ package site.javadev.studentorder.domain;
 import java.time.LocalDate;
 
 public class Person {     //Персона. Некая, неопределенный возраст и пол
-    private String surName; // Фамилия
-    private String givenName; // Имя
+    String surName; // Фамилия
+    String givenName; // Имя
     private String patronymic; // Отчество
     private LocalDate dateOfBirth; // Дата рождения
     private Address address;
