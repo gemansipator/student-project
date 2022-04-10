@@ -28,9 +28,9 @@ public class SaveStudentOrder {  //сохранить заявление уче�
 //        husband.setSurName("Петров");
 //        husband.setPassportNumber("123456");
 //        so.setHusband(husband);
-
-        String ans = husband.getPersonString();
-        System.out.println(ans);
+//
+//        String ans = husband.getPersonString();
+//        System.out.println(ans);
 
 
 
