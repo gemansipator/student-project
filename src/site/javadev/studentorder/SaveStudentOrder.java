@@ -24,10 +24,10 @@ public class SaveStudentOrder {  //сохранить заявление уче�
         // для возврата студенческой заявки.
         StudentOrder so = new StudentOrder();
         Adult husband = new Adult();
-        husband.setGivenName("Андрей");
-        husband.setSurName("Петров");
-        husband.setPassportNumber("123456");
-        so.setHusband(husband);
+//        husband.setGivenName("Андрей");
+//        husband.setSurName("Петров");
+//        husband.setPassportNumber("123456");
+//        so.setHusband(husband);
 
         String ans = husband.getPersonString();
         System.out.println(ans);

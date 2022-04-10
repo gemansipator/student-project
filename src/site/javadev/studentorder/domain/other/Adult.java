@@ -13,6 +13,11 @@ public class Adult extends Person {   //Взрослый
     private String university;
     private String studentId;
 
+    public Adult(){  //конструктор по умолчанию (невидимый).
+        // Создается автоматически только когда не создаем своего
+
+    }
+
     public String getPersonString(){
         return surName + " " + givenName + ": " + passportNumber;
     }

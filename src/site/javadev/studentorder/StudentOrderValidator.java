@@ -8,10 +8,28 @@ import site.javadev.studentorder.validator.StudentValidator;
 import site.javadev.studentorder.validator.WeddingValidator;
 
 public class StudentOrderValidator {  //проверка заявления студента
-    public static void main(String[] args) {
-        chekAll();  // проверить всё
+
+    private CityRegisterValidator cityRegisterVal;
+    private WeddingValidator weddingVal;
+    private ChildrenValidator childrenVal;
+    private StudentValidator studentVal;
+    private MailSender mailSender;
+
+    public StudentOrderValidator(){
+        cityRegisterVal = new CityRegisterValidator();
+        weddingVal = new WeddingValidator();
+        childrenVal = new ChildrenValidator();
+        studentVal = new StudentValidator();
+        mailSender = new MailSender();
+
     }
-    static void chekAll(){
+
+
+    public static void main(String[] args) {
+        StudentOrderValidator sov = new StudentOrderValidator();
+        sov.chekAll();
+    }
+    public void chekAll(){
 
         while (true){
             StudentOrder so = readStudentOrder();
@@ -33,34 +51,31 @@ public class StudentOrderValidator {  //проверка заявления ст
 
     }
 
-    static StudentOrder readStudentOrder(){
+    public StudentOrder readStudentOrder(){
         StudentOrder so = new StudentOrder();
         return so;
 
     }
-    static AnswerCityRegister chekCityRegister(StudentOrder so){ //проверка  регистрации в
+    public AnswerCityRegister chekCityRegister(StudentOrder so){ //проверка  регистрации в
         // городе (ответ типа Answer)  через функцию проверки chekCityRegister принимающую входной
         // параметр в перепенную so типа   StudentOrder
-        CityRegisterValidator crv1 = new CityRegisterValidator();
-        crv1.hostName = " Host 1";
-        AnswerCityRegister ans1 = crv1.chekCityRegister(so);
-        return ans1;
+        return cityRegisterVal.chekCityRegister(so);
 
     }
-    static AnswerWedding chekWedding(StudentOrder so){ //проверка брака
-        WeddingValidator wd = new WeddingValidator();
-        return wd.chekWedding(so);
+    public AnswerWedding chekWedding(StudentOrder so){ //проверка брака
+
+        return weddingVal.chekWedding(so);
     }
-    static AnswerChildren chekChildren(StudentOrder so){ //проверка детей
-        ChildrenValidator cv = new ChildrenValidator();
-        return cv.chekChildren(so);  //более короткий код
+    public AnswerChildren chekChildren(StudentOrder so){ //проверка детей
+
+        return childrenVal.chekChildren(so);  //более короткий код
     }
-    static AnswerStudent chekStudent(StudentOrder so){ //проверка студентов
-        return new StudentValidator().chekStudent(so);
+    public AnswerStudent chekStudent(StudentOrder so){ //проверка студентов
+        return studentVal.chekStudent(so);
     }
 
-    static void sendMail(StudentOrder so){
-        new MailSender().sendMail(so);
+    public void sendMail(StudentOrder so){
+        mailSender.sendMail(so);
     }
 
 }
