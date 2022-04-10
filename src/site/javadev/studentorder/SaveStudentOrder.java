@@ -6,14 +6,11 @@ import site.javadev.studentorder.domain.StudentOrder;
 public class SaveStudentOrder {  //сохранить заявление ученика (основной класс)
 
     public static void main(String[] args) {
-        StudentOrder so = new StudentOrder();
+        buildStudentOrder();
 
-
-
-
-
-        long ans = saveStudentOrder(so);
-        System.out.println(ans);
+//        StudentOrder so = new StudentOrder();
+//        long ans = saveStudentOrder(so);
+//        System.out.println(ans);
 
     }
 
@@ -28,7 +25,13 @@ public class SaveStudentOrder {  //сохранить заявление уче�
         StudentOrder so = new StudentOrder();
         Adult husband = new Adult();
         husband.setGivenName("Андрей");
+        husband.setSurName("Петров");
+        husband.setPassportNumber("123456");
         so.setHusband(husband);
+
+        String ans = husband.getPersonString();
+        System.out.println(ans);
+
 
         return so;
     }
