@@ -9,6 +9,10 @@ import site.javadev.studentorder.validator.WeddingValidator;
 
 public class StudentOrderValidator {  //проверка заявления студента
 
+
+    /* для того чтобы из класса StudentOrderValidator я мог обращаться
+    к другим классам, то для этого создаю в этом классе поле того
+    объекта  с которым хочу общаться :*/
     private CityRegisterValidator cityRegisterVal;
     private WeddingValidator weddingVal;
     private ChildrenValidator childrenVal;
