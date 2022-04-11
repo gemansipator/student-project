@@ -34,33 +34,38 @@ public class StudentOrderValidator {  //проверка заявления ст
         sov.chekAll();
     }
     public void chekAll(){
+        StudentOrder [] soArray = readStudentOrders();
 
-        while (true){
-            StudentOrder so = readStudentOrder();
-            if(so == null){
-                break; //выйти из цикла совсем
-            }
+        for (int c = 0; c < soArray.length; c++) {
+            System.out.println();
+            checkOneOrder(soArray[c]); //передаем в метод checkOneOrder
+            // заявку. Для этого обращаемся к элементу массива [c]
 
-            AnswerCityRegister cityAnswer = chekCityRegister(so);
-            if (!cityAnswer.succes){
-                //
-                //continue; //вернуться в начало цикла
-                break;
-            }
-            AnswerWedding wedAnswer = chekWedding(so);
-            AnswerChildren childAnswer = chekChildren(so);
-            AnswerStudent studentAnswer = chekStudent(so);
-            sendMail(so);
         }
 
     }
+    public StudentOrder [] readStudentOrders(){
+        StudentOrder [] soArray = new StudentOrder[3];
 
-    public StudentOrder readStudentOrder(){
-        SaveStudentOrder.buildStudentOrder();
-        StudentOrder so = new StudentOrder();
-        return so;
+        for (int c = 0 ; c < soArray.length; c++ ){
+            soArray[c] = SaveStudentOrder.buildStudentOrder(c);
+        }
+
+        return soArray;
 
     }
+
+    public void checkOneOrder(StudentOrder so){
+        AnswerCityRegister cityAnswer = chekCityRegister(so);
+        AnswerWedding wedAnswer = chekWedding(so);
+        AnswerChildren childAnswer = chekChildren(so);
+        AnswerStudent studentAnswer = chekStudent(so);
+        sendMail(so);
+
+    }
+
+
+
     public AnswerCityRegister chekCityRegister(StudentOrder so){ //проверка  регистрации в
         // городе (ответ типа Answer)  через функцию проверки chekCityRegister принимающую входной
         // параметр в перепенную so типа   StudentOrder
