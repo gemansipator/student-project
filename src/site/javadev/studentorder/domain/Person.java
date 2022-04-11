@@ -2,7 +2,7 @@ package site.javadev.studentorder.domain;
 
 import java.time.LocalDate;
 
-public class Person {     //Персона. Некая, неопределенный возраст и пол
+public abstract class Person {     //Персона. Некая, неопределенный возраст и пол
     protected String surName; // Фамилия
     protected String givenName; // Имя
     private String patronymic; // Отчество

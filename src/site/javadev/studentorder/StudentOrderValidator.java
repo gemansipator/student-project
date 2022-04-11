@@ -56,6 +56,7 @@ public class StudentOrderValidator {  //проверка заявления ст
     }
 
     public StudentOrder readStudentOrder(){
+        SaveStudentOrder.buildStudentOrder();
         StudentOrder so = new StudentOrder();
         return so;
 
