@@ -47,8 +47,14 @@ public class StudentOrderValidator {  //проверка заявления ст
     public StudentOrder [] readStudentOrders(){
         StudentOrder [] soArray = new StudentOrder[3];
 
-        for (int c = 0 ; c < soArray.length; c++ ){
-            soArray[c] = SaveStudentOrder.buildStudentOrder(c);
+//        for (int c = 0 ; c < soArray.length; c++ ){
+//            soArray[c] = SaveStudentOrder.buildStudentOrder(c);
+//        }
+        for (StudentOrder so : soArray
+             ) {
+            System.out.println();
+            checkOneOrder(so);
+
         }
 
         return soArray;
