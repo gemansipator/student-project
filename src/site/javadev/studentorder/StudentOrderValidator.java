@@ -50,6 +50,7 @@ public class StudentOrderValidator {  //проверка заявления ст
 //        for (int c = 0 ; c < soArray.length; c++ ){
 //            soArray[c] = SaveStudentOrder.buildStudentOrder(c);
 //        }
+
         for (StudentOrder so : soArray
              ) {
             System.out.println();
