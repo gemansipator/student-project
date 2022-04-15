@@ -23,6 +23,9 @@ public class SaveStudentOrder {  //сохранить заявление уче�
         StudentOrder so = new StudentOrder();
         so.setStudentOrderId(id);
 
+        Adult husband = new Adult("Васильев", "Андрей",
+                "Петрович", null);
+
         return so;
     }
 }
