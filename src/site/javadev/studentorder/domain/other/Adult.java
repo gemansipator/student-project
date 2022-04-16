@@ -13,12 +13,15 @@ public class Adult extends Person {   //Взрослый
     private String university;
     private String studentId;
 
+
+    public Adult(){
+    }
     public Adult(String surName, String givenName, String patronymic, LocalDate dateOfBirth) {
         super(surName, givenName, patronymic, dateOfBirth);
     }
-//    public Adult(String surName, String givenName, String patronymic) {
-//        super(surName, givenName, patronymic, null);
-//    }
+     public String getSurName(){
+        return "";
+     }
 
 
     public String getPassportSeria() {
