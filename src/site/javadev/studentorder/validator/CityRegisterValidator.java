@@ -18,6 +18,7 @@ public class CityRegisterValidator {  //класс для возврата ре�
 
 
     public AnswerCityRegister chekCityRegister(StudentOrder so){
+
         personChecker.checkPerson(so.getHusband());
         personChecker.checkPerson(so.getWife());
         personChecker.checkPerson(so.getChild());
