@@ -10,7 +10,7 @@ public class CityRegisterValidator {  //класс для возврата ре�
     private  String login;
     String password;
 
-    private FakeCityRegisterChecker personChecker;
+    private CityRegisterChecker personChecker;
 
     public CityRegisterValidator(){
         personChecker = new FakeCityRegisterChecker();
