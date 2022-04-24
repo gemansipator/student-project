@@ -1,6 +1,7 @@
 package site.javadev.studentorder.validator;
 
 import site.javadev.studentorder.domain.AnswerCityRegister;
+import site.javadev.studentorder.domain.CityRegisterCheckerResponse;
 import site.javadev.studentorder.domain.StudentOrder;
 
 public class CityRegisterValidator {  //класс для возврата результата
@@ -19,9 +20,9 @@ public class CityRegisterValidator {  //класс для возврата ре�
 
     public AnswerCityRegister chekCityRegister(StudentOrder so){
 
-        personChecker.checkPerson(so.getHusband());
-        personChecker.checkPerson(so.getWife());
-        personChecker.checkPerson(so.getChild());
+        CityRegisterCheckerResponse hans = personChecker.checkPerson(so.getHusband());
+        CityRegisterCheckerResponse wans = personChecker.checkPerson(so.getWife());
+        CityRegisterCheckerResponse cans = personChecker.checkPerson(so.getChild());
 
         AnswerCityRegister ans = new AnswerCityRegister();
 
