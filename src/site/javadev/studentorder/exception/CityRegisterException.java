@@ -2,7 +2,7 @@ package site.javadev.studentorder.exception;
 
 public class CityRegisterException extends Exception{
 
-    public CityRegisterException() { //просто исключение
+    public CityRegisterException() {  //просто исключение
     }
 
     public CityRegisterException(String message) { //исключение с сообщением

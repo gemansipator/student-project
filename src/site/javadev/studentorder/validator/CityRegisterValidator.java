@@ -25,7 +25,6 @@ public class CityRegisterValidator {  //класс для возврата ре�
         CityRegisterCheckerResponse cans = personChecker.checkPerson(so.getChild());
 
         AnswerCityRegister ans = new AnswerCityRegister();
-
         return ans;
     }
 }
